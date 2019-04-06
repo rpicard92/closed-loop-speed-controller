@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.73"
+    ComputedModelVersion    "1.81"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -17,11 +17,17 @@ Model {
     PreCompExecutionDomainType "Unset"
     IsExportFunctionModel   0
     NumParameterArguments   0
-    NumExternalFileReferences 1
+    NumExternalFileReferences 2
     ExternalFileReference {
       Reference		      "simulink/Continuous/PID Controller"
       Path		      "dcIntrocomplete_2/Discrete PID Controller"
       SID		      "18"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "powerlib_meascontrol/Pulse & Signal\nGenerators/PWM Generator\n(DC-DC)"
+      Path		      "dcIntrocomplete_2/PWM Generator (DC-DC)"
+      SID		      "53"
       Type		      "LIBRARY_BLOCK"
     }
     OrderedModelArguments   1
@@ -53,7 +59,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-7.0, -7.0, 1455.0, 935.0]
+      Location		      [-8.0, -8.0, 1936.0, 1056.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -78,7 +84,7 @@ Model {
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [2104.0, 1149.0]
+	  Extents		  [1882.0, 872.0]
 	  ZoomFactor		  [1.0549410612038927]
 	  Offset		  [125.64783021413757, -217.3817936882408]
 	}
@@ -87,7 +93,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "42"
-	  Extents		  [2104.0, 1149.0]
+	  Extents		  [2104.0, 1089.0]
 	  ZoomFactor		  [1.0]
 	  Offset		  [-569.94270833333337, -315.66666666666669]
 	}
@@ -104,18 +110,18 @@ Model {
 	UserData		""
 	Floating		[0]
 	DockPosition		"Right"
-	Width			[426]
-	Height			[320]
+	Width			[640]
+	Height			[480]
       }
       WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAACTAP///wAAAAEAAAAAAAAAAPwCA"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAUwD///8AAAhwAAAE0AAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAeAAAADpAAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
-      "////wEAAACp/////wAAAAAAAAAA/////wEAAAEu/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAHX/////wAAAAAAAAAA/"
-      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAQy/////wAAAAAAAAAA/"
-      "////wEAAARz/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
+      "////wEAAAB5/////wAAAAAAAAAA/////wEAAADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFT/////wAAAAAAAAAA/"
+      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAL9/////wAAAAAAAAAA/"
+      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
     }
   }
   HideAutomaticNames	  on
@@ -128,9 +134,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "computer"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Apr 06 12:28:37 2019"
-  RTWModifiedTimeStamp	  476454484
-  ModelVersionFormat	  "1.%<AutoIncrement:73>"
+  LastModifiedDate	  "Sat Apr 06 18:51:07 2019"
+  RTWModifiedTimeStamp	  476477356
+  ModelVersionFormat	  "1.%<AutoIncrement:81>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -1062,6 +1068,21 @@ Model {
       PreserveConstantTs      off
     }
     Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
       BlockType		      Inport
       Port		      "1"
       OutputFunctionCall      off
@@ -1197,7 +1218,7 @@ Model {
   }
   System {
     Name		    "dcIntrocomplete_2"
-    Location		    [-7, -7, 1448, 928]
+    Location		    [-8, -8, 1928, 1048]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -1214,7 +1235,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "105"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "52"
+    SIDHighWatermark	    "54"
     Block {
       BlockType		      ZeroOrderHold
       Name		      "A-D \nConverter"
@@ -1238,7 +1259,7 @@ Model {
       Name		      "DC Motor1"
       SID		      "42"
       Ports		      [2, 1]
-      Position		      [500, 105, 555, 165]
+      Position		      [595, 105, 650, 165]
       ZOrder		      314
       RequestExecContextInheritance off
       Object {
@@ -1344,7 +1365,7 @@ Model {
       }
       System {
 	Name			"DC Motor1"
-	Location		[-7, -7, 1448, 928]
+	Location		[8, 8, 1463, 943]
 	Open			on
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -1543,7 +1564,7 @@ Model {
       Name		      "Discrete PID Controller"
       SID		      "18"
       Ports		      [1, 1]
-      Position		      [305, 133, 365, 167]
+      Position		      [290, 133, 350, 167]
       ZOrder		      -5
       LibraryVersion	      "1.444"
       FontName		      "Arial"
@@ -1716,6 +1737,33 @@ Model {
       }
     }
     Block {
+      BlockType		      Gain
+      Name		      "Gain"
+      SID		      "54"
+      Position		      [505, 135, 535, 165]
+      ZOrder		      321
+      Gain		      "70"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "PWM Generator\n(DC-DC)"
+      SID		      "53"
+      Ports		      [1, 1]
+      Position		      [400, 131, 450, 169]
+      ZOrder		      320
+      LibraryVersion	      "1.167"
+      SourceBlock	      "powerlib_meascontrol/Pulse & Signal\nGenerators/PWM Generator\n(DC-DC)"
+      SourceType	      "PWM Generator (DC-DC)"
+      SourceProductName	      "Simscape Power Systems"
+      SourceProductBaseCode   "PS"
+      ContentPreviewEnabled   on
+      Fsw		      "5000"
+      Ts		      "0"
+    }
+    Block {
       BlockType		      Scope
       Name		      "Scope3"
       SID		      "33"
@@ -1725,20 +1773,20 @@ Model {
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
       "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData2'),extmgr.Configuration('Visuals','Time Domain"
-      "',true,'SerializedDisplays',{struct('MinYLimReal','-0.72958','MaxYLimReal','5.63646','YLabelReal','','MinYLimMag"
-      "','0.00000','MaxYLimMag','5.63646','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axes"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','-2.29309','MaxYLimReal','6.35361','YLabelReal','','MinYLimMag"
+      "','0.00000','MaxYLimMag','6.35361','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axes"
       "Color',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.06666"
       "66666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.8313"
       "72549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686"
       " 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines"
       "',1,'LineNames',{{'Measured speed'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLi"
-      "mReal','-0.72958','MaxYLimReal','5.63646','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','5.63646','LegendV"
+      "mReal','-2.29309','MaxYLimReal','6.35361','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','6.35361','LegendV"
       "isibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509"
       "803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.41176470588"
       "2353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549"
       "019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration("
       "'Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true,'Version','2018b')),'Version','"
-      "2018b','Position',[1.66666666666667 41.6666666666667 718.666666666667 839.333333333333])"
+      "2018b','Position',[1921 50 1920 963])"
       NumInputPorts	      "1"
       Floating		      off
     }
@@ -1875,8 +1923,8 @@ Model {
       Labels		      [0, 0]
       SrcBlock		      "Discrete PID Controller"
       SrcPort		      1
-      DstBlock		      "DC Motor1"
-      DstPort		      2
+      DstBlock		      "PWM Generator\n(DC-DC)"
+      DstPort		      1
     }
     Line {
       ZOrder		      12
@@ -1890,7 +1938,7 @@ Model {
       ZOrder		      22
       SrcBlock		      "DC Motor1"
       SrcPort		      1
-      Points		      [155, 0; 0, 105]
+      Points		      [60, 0; 0, 105]
       Branch {
 	ZOrder			38
 	Labels			[1, 0]
@@ -1918,6 +1966,20 @@ Model {
       SrcPort		      1
       Points		      [-20, 0]
       DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      42
+      SrcBlock		      "PWM Generator\n(DC-DC)"
+      SrcPort		      1
+      DstBlock		      "Gain"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      43
+      SrcBlock		      "Gain"
+      SrcPort		      1
+      DstBlock		      "DC Motor1"
       DstPort		      2
     }
   }
