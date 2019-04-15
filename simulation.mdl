@@ -1,16 +1,12 @@
 Model {
-  Name			  "dcIntrocomplete_2"
+  Name			  "simulation"
   Version		  9.2
   SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-<<<<<<< HEAD:simulation.mdl
-    ComputedModelVersion    "1.74"
-=======
-    ComputedModelVersion    "1.81"
->>>>>>> 760a6b51b74aa6536136d2a163688afbd068e088:PID_Control_DC_Motor/dcIntrocomplete_2.mdl
+    ComputedModelVersion    "1.29"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -23,15 +19,15 @@ Model {
     NumParameterArguments   0
     NumExternalFileReferences 2
     ExternalFileReference {
-      Reference		      "simulink/Continuous/PID Controller"
-      Path		      "dcIntrocomplete_2/Discrete PID Controller"
-      SID		      "18"
+      Reference		      "embdlinuxlib/GPIO Read"
+      Path		      "simulation/GPIO Read"
+      SID		      "71"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
-      Reference		      "powerlib_meascontrol/Pulse & Signal\nGenerators/PWM Generator\n(DC-DC)"
-      Path		      "dcIntrocomplete_2/PWM Generator (DC-DC)"
-      SID		      "53"
+      Reference		      "raspberrypilib/PWM"
+      Path		      "simulation/PWM"
+      SID		      "56"
       Type		      "LIBRARY_BLOCK"
     }
     OrderedModelArguments   1
@@ -63,7 +59,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, -8.0, 1936.0, 1056.0]
+      Location		      [-7.0, -7.0, 1455.0, 935.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -80,36 +76,20 @@ Model {
 	$ClassName		"Simulink.ExplorerBarInfo"
 	Visible			[1]
       }
-      Array {
-	Type			"Simulink.EditorInfo"
-	Dimension		2
-	Object {
-	  $ObjectID		  5
-	  IsActive		  [1]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
-	  Extents		  [1882.0, 872.0]
-	  ZoomFactor		  [1.0549410612038927]
-	  Offset		  [125.64783021413757, -217.3817936882408]
-	}
-	Object {
-	  $ObjectID		  6
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "42"
-<<<<<<< HEAD:simulation.mdl
-	  Extents		  [2160.0, 1440.0]
-=======
-	  Extents		  [2104.0, 1089.0]
->>>>>>> 760a6b51b74aa6536136d2a163688afbd068e088:PID_Control_DC_Motor/dcIntrocomplete_2.mdl
-	  ZoomFactor		  [1.0]
-	  Offset		  [-569.94270833333337, -315.66666666666669]
-	}
-	PropName		"EditorsInfo"
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[2104.0, 1154.0]
+	ZoomFactor		[1.25]
+	Offset			[-78.832077195387171, 46.480889574054743]
       }
       Object {
 	$PropName		"DockComponentsInfo"
-	$ObjectID		7
+	$ObjectID		6
 	$ClassName		"Simulink.DockComponentInfo"
 	Type			"GLUE2:PropertyInspector"
 	ID			"Property Inspector"
@@ -118,39 +98,33 @@ Model {
 	UserData		""
 	Floating		[0]
 	DockPosition		"Right"
-	Width			[640]
-	Height			[480]
+	Width			[426]
+	Height			[320]
       }
       WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP///wAAAAEAAAAAAAAAAPwCA"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAACTAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAeAAAADpAAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "QBjAHQAbwByAAAAAAD/////AAAAUwD///8AAAhwAAAE0AAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
-      "////wEAAAB5/////wAAAAAAAAAA/////wEAAADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFT/////wAAAAAAAAAA/"
-      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAL9/////wAAAAAAAAAA/"
-      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
+      "////wEAAACp/////wAAAAAAAAAA/////wEAAAEu/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAHX/////wAAAAAAAAAA/"
+      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAOx/////wAAAAAAAAAA/"
+      "////wEAAAPy/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
     }
   }
   HideAutomaticNames	  on
-  PhysicalModelingChecksum "97001682"
-  PhysicalModelingParameterChecksum "3228599266"
-  PhysicalModelingProducts "Power_System_Blocks"
+  PhysicalModelingChecksum "681464010"
+  PhysicalModelingParameterChecksum "681464010"
+  PhysicalModelingProducts "Simscape"
   Created		  "Tue Apr 01 00:41:34 2008"
   Creator		  "deastman"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "computer"
   ModifiedDateFormat	  "%<Auto>"
-<<<<<<< HEAD:simulation.mdl
-  LastModifiedDate	  "Mon Apr 15 10:00:09 2019"
-  RTWModifiedTimeStamp	  477223205
-  ModelVersionFormat	  "1.%<AutoIncrement:74>"
-=======
-  LastModifiedDate	  "Sat Apr 06 18:51:07 2019"
-  RTWModifiedTimeStamp	  476477356
-  ModelVersionFormat	  "1.%<AutoIncrement:81>"
->>>>>>> 760a6b51b74aa6536136d2a163688afbd068e088:PID_Control_DC_Motor/dcIntrocomplete_2.mdl
+  LastModifiedDate	  "Mon Apr 15 12:36:05 2019"
+  RTWModifiedTimeStamp	  477232556
+  ModelVersionFormat	  "1.%<AutoIncrement:29>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -187,7 +161,7 @@ Model {
   FunctionConnectors	  off
   BrowserLookUnderMasks	  off
   MultiThreadCoSim	  on
-  SimulationMode	  "normal"
+  SimulationMode	  "external"
   VisualizeLoggedSignalsWhenLoggingToFile off
   PauseTimes		  "5"
   NumberOfSteps		  1
@@ -205,13 +179,13 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    8
+    $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "dcIntrocomplete_2"
+    model_		    "simulation"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "dcIntrocomplete_2"
+      Cell		      "simulation"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -249,20 +223,20 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      9
+      $ObjectID		      8
       Version		      "1.18.1"
       DisabledProps	      []
       Description	      ""
       Array {
 	Type			"Handle"
-	Dimension		11
+	Dimension		12
 	Simulink.SolverCC {
-	  $ObjectID		  10
+	  $ObjectID		  9
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
 	  StartTime		  "0.0"
-	  StopTime		  "50"
+	  StopTime		  "10"
 	  AbsTol		  "auto"
 	  AutoScaleAbsTol	  on
 	  FixedStep		  "auto"
@@ -279,18 +253,18 @@ Model {
 	  RelTol		  "1e-3"
 	  EnableMultiTasking	  on
 	  ConcurrentTasks	  off
-	  Solver		  "ode45"
-	  SolverName		  "ode45"
+	  Solver		  "FixedStepAuto"
+	  SolverName		  "FixedStepAuto"
 	  SolverJacobianMethodControl "auto"
 	  ShapePreserveControl	  "DisableAll"
 	  ZeroCrossControl	  "UseLocalSettings"
 	  ZeroCrossAlgorithm	  "Nonadaptive"
 	  AlgebraicLoopSolver	  "TrustRegion"
-	  SolverInfoToggleStatus  off
+	  SolverInfoToggleStatus  on
 	  IsAutoAppliedInSIP	  off
 	  SolverResetMethod	  "Fast"
-	  PositivePriorityOrder	  off
-	  AutoInsertRateTranBlk	  off
+	  PositivePriorityOrder	  on
+	  AutoInsertRateTranBlk	  on
 	  SampleTimeConstraint	  "Unconstrained"
 	  InsertRTBMode		  "Whenever possible"
 	  SampleTimeProperty	  []
@@ -298,7 +272,7 @@ Model {
 	  MinimalZcImpactIntegration off
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  11
+	  $ObjectID		  10
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -339,21 +313,9 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  12
+	  $ObjectID		  11
 	  Version		  "1.18.1"
-	  Array {
-	    Type		    "Cell"
-	    Dimension		    8
-	    Cell		    "ZeroExternalMemoryAtStartup"
-	    Cell		    "ZeroInternalMemoryAtStartup"
-	    Cell		    "NoFixptDivByZeroProtection"
-	    Cell		    "OptimizeModelRefInitCode"
-	    Cell		    "BooleansAsBitfields"
-	    Cell		    "PassReuseOutputArgsAs"
-	    Cell		    "PassReuseOutputArgsThreshold"
-	    Cell		    "UseSpecifiedMinMax"
-	    PropName		    "DisabledProps"
-	  }
+	  DisabledProps		  []
 	  Description		  ""
 	  BlockReduction	  on
 	  BooleanDataType	  on
@@ -366,7 +328,7 @@ Model {
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
 	  BufferReuse		  on
-	  EnhancedBackFolding	  off
+	  EnhancedBackFolding	  on
 	  CachingGlobalReferences off
 	  GlobalBufferReuse	  on
 	  StrengthReduction	  off
@@ -376,7 +338,7 @@ Model {
 	  BitfieldContainerType	  "uint_T"
 	  EnableMemcpy		  on
 	  MemcpyThreshold	  64
-	  PassReuseOutputArgsAs	  "Structure reference"
+	  PassReuseOutputArgsAs	  "Individual arguments"
 	  PassReuseOutputArgsThreshold 12
 	  ExpressionDepthLimit	  2147483647
 	  LocalBlockOutputs	  on
@@ -390,30 +352,25 @@ Model {
 	  NoFixptDivByZeroProtection off
 	  EfficientFloat2IntCast  off
 	  EfficientMapNaN2IntZero on
-	  LifeSpan		  "inf"
-	  MaxStackSize		  "Inherit from target"
+	  LifeSpan		  "auto"
+	  MaxStackSize		  "64"
 	  BufferReusableBoundary  on
 	  SimCompilerOptimization "off"
 	  AccelVerboseBuild	  off
-	  OptimizeBlockOrder	  "off"
+	  OptimizeBlockOrder	  "speed"
 	  OptimizeDataStoreBuffers on
 	  BusAssignmentInplaceUpdate on
-	  DifferentSizesBufferReuse off
+	  DifferentSizesBufferReuse on
 	  OptimizationLevel	  "level2"
 	  OptimizationPriority	  "Balanced"
-	  OptimizationCustomize	  on
+	  OptimizationCustomize	  off
 	  UseRowMajorAlgorithm	  off
 	  LabelGuidedReuse	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  13
+	  $ObjectID		  12
 	  Version		  "1.18.1"
-	  Array {
-	    Type		    "Cell"
-	    Dimension		    1
-	    Cell		    "UseOnlyExistingSharedCode"
-	    PropName		    "DisabledProps"
-	  }
+	  DisabledProps		  []
 	  Description		  ""
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -456,7 +413,7 @@ Model {
 	  ParameterOverflowMsg	  "error"
 	  ParameterUnderflowMsg	  "none"
 	  ParameterPrecisionLossMsg "warning"
-	  ParameterTunabilityLossMsg "warning"
+	  ParameterTunabilityLossMsg "error"
 	  FixptConstUnderflowMsg  "none"
 	  FixptConstOverflowMsg	  "none"
 	  FixptConstPrecisionLossMsg "none"
@@ -525,9 +482,14 @@ Model {
 	  UnderSpecifiedDimensionMsg "none"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  14
+	  $ObjectID		  13
 	  Version		  "1.18.1"
-	  DisabledProps		  []
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "ProdHWDeviceType"
+	    PropName		    "DisabledProps"
+	  }
 	  Description		  ""
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -539,14 +501,14 @@ Model {
 	  ProdBitPerPointer	  32
 	  ProdBitPerSizeT	  32
 	  ProdBitPerPtrDiffT	  32
-	  ProdLargestAtomicInteger "Char"
-	  ProdLargestAtomicFloat  "None"
-	  ProdIntDivRoundTo	  "Undefined"
-	  ProdEndianess		  "Unspecified"
+	  ProdLargestAtomicInteger "Long"
+	  ProdLargestAtomicFloat  "Double"
+	  ProdIntDivRoundTo	  "Zero"
+	  ProdEndianess		  "LittleEndian"
 	  ProdWordSize		  32
 	  ProdShiftRightIntArith  on
 	  ProdLongLongMode	  off
-	  ProdHWDeviceType	  "32-bit Generic"
+	  ProdHWDeviceType	  "ARM Compatible->ARM Cortex"
 	  TargetBitPerChar	  8
 	  TargetBitPerShort	  16
 	  TargetBitPerInt	  32
@@ -569,11 +531,11 @@ Model {
 	  TargetHWDeviceType	  "Specified"
 	  TargetUnknown		  off
 	  ProdEqTarget		  on
-	  UseEmbeddedCoderFeatures on
-	  UseSimulinkCoderFeatures on
+	  UseEmbeddedCoderFeatures off
+	  UseSimulinkCoderFeatures off
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  15
+	  $ObjectID		  14
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -592,7 +554,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  16
+	  $ObjectID		  15
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -618,51 +580,49 @@ Model {
 	  ModelFunctionsGlobalVisibility "on"
 	  CompileTimeRecursionLimit 50
 	  EnableRuntimeRecursion  on
-	  MATLABDynamicMemAlloc	  on
+	  MATLABDynamicMemAlloc	  off
 	  MATLABDynamicMemAllocThreshold 65536
 	  CustomCodeFunctionArrayLayout	[]
 	  DefaultCustomCodeFunctionArrayLayout "NotSpecified"
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  17
+	  $ObjectID		  16
 	  Version		  "1.18.1"
-	  Array {
-	    Type		    "Cell"
-	    Dimension		    16
-	    Cell		    "IncludeHyperlinkInReport"
-	    Cell		    "GenerateTraceInfo"
-	    Cell		    "GenerateTraceReport"
-	    Cell		    "GenerateTraceReportSl"
-	    Cell		    "GenerateTraceReportSf"
-	    Cell		    "GenerateTraceReportEml"
-	    Cell		    "PortableWordSizes"
-	    Cell		    "GenerateWebview"
-	    Cell		    "GenerateCodeMetricsReport"
-	    Cell		    "GenerateCodeReplacementReport"
-	    Cell		    "GenerateMissedCodeReplacementReport"
-	    Cell		    "GenerateErtSFunction"
-	    Cell		    "CreateSILPILBlock"
-	    Cell		    "CodeExecutionProfiling"
-	    Cell		    "CodeProfilingSaveOptions"
-	    Cell		    "CodeProfilingInstrumentation"
-	    PropName		    "DisabledProps"
-	  }
-	  SystemTargetFile	  "grt.tlc"
-	  HardwareBoard		  "None"
-	  TLCOptions		  ""
+	  DisabledProps		  []
+	  SystemTargetFile	  "ert.tlc"
+	  HardwareBoard		  "Raspberry Pi"
+	  TLCOptions		  "-aInlineSetEventsForThisBaseRateFcn=TLC_FALSE -aSuppressMultiTaskScheduler=TLC_FALSE  -aRateBasedSte"
+	  "pFcn=0"
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
 	  GenerateMakefile	  on
 	  PackageGeneratedCodeAndArtifacts off
 	  PackageName		  ""
-	  TemplateMakefile	  "grt_default_tmf"
-	  PostCodeGenCommand	  ""
-	  Description		  ""
-	  GenerateReport	  off
+	  TemplateMakefile	  "ert_default_tmf"
+	  PostCodeGenCommand	  "codertarget.postCodeGenHookCommand(h)"
+	  Description		  "Embedded Coder"
+	  GenerateReport	  on
 	  RTWVerbose		  on
 	  RetainRTWFile		  off
-	  RTWBuildHooks		  []
+	  Array {
+	    Type		    "Struct"
+	    Dimension		    1
+	    MATStruct {
+	      className		      "codertarget.tools.BuildHook"
+	      Array {
+		Type			"Cell"
+		Dimension		0
+		PropName		"argsAllComponents"
+	      }
+	      argsTopModelOnly	      []
+	      excludedModels	      []
+	      includeReferencedModels "on"
+	      includeTopModel	      "on"
+	      enabled		      "on"
+	    }
+	    PropName		    "RTWBuildHooks"
+	  }
 	  ProfileTLC		  off
 	  TLCDebug		  off
 	  TLCCoverage		  off
@@ -680,11 +640,11 @@ Model {
 	  CustomFFTCallback	  ""
 	  CustomInitializer	  ""
 	  CustomTerminator	  ""
-	  Toolchain		  "Automatically locate an installed toolchain"
-	  BuildConfiguration	  "Faster Builds"
+	  Toolchain		  "GNU GCC Raspberry Pi"
+	  BuildConfiguration	  "Faster Runs"
 	  CustomToolchainOptions  []
-	  IncludeHyperlinkInReport off
-	  LaunchReport		  off
+	  IncludeHyperlinkInReport on
+	  LaunchReport		  on
 	  PortableWordSizes	  off
 	  CreateSILPILBlock	  "None"
 	  CodeExecutionProfiling  off
@@ -694,11 +654,11 @@ Model {
 	  SILDebugging		  off
 	  TargetLang		  "C"
 	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
-	  GenerateTraceInfo	  off
-	  GenerateTraceReport	  off
-	  GenerateTraceReportSl	  off
-	  GenerateTraceReportSf	  off
-	  GenerateTraceReportEml  off
+	  GenerateTraceInfo	  on
+	  GenerateTraceReport	  on
+	  GenerateTraceReportSl	  on
+	  GenerateTraceReportSf	  on
+	  GenerateTraceReportEml  on
 	  GenerateWebview	  off
 	  GenerateCodeMetricsReport off
 	  GenerateCodeReplacementReport	off
@@ -712,57 +672,25 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      18
+	      $ObjectID		      17
 	      Version		      "1.18.1"
-	      Array {
-		Type			"Cell"
-		Dimension		28
-		Cell			"IgnoreCustomStorageClasses"
-		Cell			"InsertBlockDesc"
-		Cell			"SFDataObjDesc"
-		Cell			"SimulinkDataObjDesc"
-		Cell			"DefineNamingRule"
-		Cell			"SignalNamingRule"
-		Cell			"ParamNamingRule"
-		Cell			"InlinedPrmAccess"
-		Cell			"CustomSymbolStr"
-		Cell			"CustomSymbolStrGlobalVar"
-		Cell			"CustomSymbolStrType"
-		Cell			"CustomSymbolStrField"
-		Cell			"CustomSymbolStrFcn"
-		Cell			"CustomSymbolStrBlkIO"
-		Cell			"CustomSymbolStrTmpVar"
-		Cell			"CustomSymbolStrMacro"
-		Cell			"IgnoreTestpoints"
-		Cell			"BlockCommentType"
-		Cell			"InsertPolySpaceComments"
-		Cell			"MATLABFcnDesc"
-		Cell			"InternalIdentifier"
-		Cell			"CustomSymbolStrModelFcn"
-		Cell			"CustomSymbolStrFcnArg"
-		Cell			"CustomSymbolStrUtil"
-		Cell			"CustomSymbolStrEmxType"
-		Cell			"CustomSymbolStrEmxFcn"
-		Cell			"CustomUserTokenString"
-		Cell			"ReqsInCode"
-		PropName		"DisabledProps"
-	      }
+	      DisabledProps	      []
 	      Description	      ""
 	      Comment		      ""
-	      ForceParamTrailComments off
+	      ForceParamTrailComments on
 	      GenerateComments	      on
 	      CommentStyle	      "Auto"
-	      IgnoreCustomStorageClasses on
+	      IgnoreCustomStorageClasses off
 	      IgnoreTestpoints	      off
 	      MaxIdLength	      31
 	      PreserveName	      off
 	      PreserveNameWithParent  off
-	      ShowEliminatedStatement off
-	      OperatorAnnotations     off
-	      SimulinkDataObjDesc     off
-	      SFDataObjDesc	      off
+	      ShowEliminatedStatement on
+	      OperatorAnnotations     on
+	      SimulinkDataObjDesc     on
+	      SFDataObjDesc	      on
 	      MATLABFcnDesc	      off
-	      MangleLength	      1
+	      MangleLength	      10
 	      SharedChecksumLength    8
 	      CustomSymbolStrGlobalVar "$R$N$M"
 	      CustomSymbolStrType     "$N$R$M_T"
@@ -784,11 +712,11 @@ Model {
 	      ParamNamingFcn	      ""
 	      SignalNamingRule	      "None"
 	      SignalNamingFcn	      ""
-	      InsertBlockDesc	      off
+	      InsertBlockDesc	      on
 	      InsertPolySpaceComments off
 	      SimulinkBlockComments   on
 	      BlockCommentType	      "BlockPathComment"
-	      StateflowObjectComments on
+	      StateflowObjectComments off
 	      MATLABSourceComments    off
 	      EnableCustomComments    off
 	      InternalIdentifierFile  ""
@@ -798,33 +726,11 @@ Model {
 	      UseSimReservedNames     off
 	      ReservedNameArray	      []
 	    }
-	    Simulink.GRTTargetCC {
+	    Simulink.ERTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      19
+	      $ObjectID		      18
 	      Version		      "1.18.1"
-	      Array {
-		Type			"Cell"
-		Dimension		18
-		Cell			"IncludeMdlTerminateFcn"
-		Cell			"RemoveResetFunc"
-		Cell			"SuppressErrorStatus"
-		Cell			"ERTCustomFileBanners"
-		Cell			"GenerateSampleERTMain"
-		Cell			"GenerateTestInterfaces"
-		Cell			"ModelStepFunctionPrototypeControlCompliant"
-		Cell			"CPPClassGenCompliant"
-		Cell			"PortableWordSizes"
-		Cell			"PurelyIntegerCode"
-		Cell			"PreserveStateflowLocalDataDimensions"
-		Cell			"SupportComplex"
-		Cell			"SupportAbsoluteTime"
-		Cell			"SupportContinuousTime"
-		Cell			"SupportNonInlinedSFcns"
-		Cell			"GenerateAllocFcn"
-		Cell			"ExistingSharedCode"
-		Cell			"RemoveDisableFunc"
-		PropName		"DisabledProps"
-	      }
+	      DisabledProps	      []
 	      Description	      ""
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
@@ -834,7 +740,7 @@ Model {
 	      CodeReplacementLibrary  "None"
 	      UtilityFuncGeneration   "Auto"
 	      MultiwordTypeDef	      "System defined"
-	      MultiwordLength	      2048
+	      MultiwordLength	      256
 	      DynamicStringBufferSize 256
 	      GenerateFullHeader      on
 	      InferredTypesCompatibility off
@@ -846,35 +752,35 @@ Model {
 	      CompOptLevelCompliant   on
 	      ConcurrentExecutionCompliant on
 	      IncludeMdlTerminateFcn  on
-	      GeneratePreprocessorConditionals "Disable all"
-	      CombineOutputUpdateFcns off
+	      GeneratePreprocessorConditionals "Use local settings"
+	      CombineOutputUpdateFcns on
 	      CombineSignalStateStructs	off
 	      GroupInternalDataByFunction off
 	      SuppressErrorStatus     off
 	      IncludeFileDelimiter    "Auto"
-	      ERTCustomFileBanners    off
+	      ERTCustomFileBanners    on
 	      SupportAbsoluteTime     on
 	      LogVarNameModifier      "rt_"
-	      MatFileLogging	      on
+	      MatFileLogging	      off
 	      MultiInstanceERTCode    off
 	      CodeInterfacePackaging  "Nonreusable function"
 	      PurelyIntegerCode	      off
 	      SupportNonFinite	      on
 	      SupportComplex	      on
-	      SupportContinuousTime   on
+	      SupportContinuousTime   off
 	      SupportNonInlinedSFcns  on
 	      RemoveDisableFunc	      off
-	      RemoveResetFunc	      off
-	      SupportVariableSizeSignals off
+	      RemoveResetFunc	      on
+	      SupportVariableSizeSignals on
 	      ParenthesesLevel	      "Nominal"
 	      CastingMode	      "Nominal"
 	      PreserveStateflowLocalDataDimensions off
-	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
-	      ModelStepFunctionPrototypeControlCompliant off
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.ERTCustomization"
+	      ModelStepFunctionPrototypeControlCompliant on
 	      CPPClassGenCompliant    on
 	      AutosarCompliant	      off
 	      MDXCompliant	      off
-	      GRTInterface	      on
+	      GRTInterface	      off
 	      GenerateAllocFcn	      off
 	      UseToolchainInfoCompliant	on
 	      GenerateSharedConstants on
@@ -888,27 +794,109 @@ Model {
 	      ERTHeaderFileRootName   "$R$E"
 	      ERTSourceFileRootName   "$R$E"
 	      ERTDataFileRootName     "$R_data"
-	      UseMalloc		      off
+	      GenerateASAP2	      off
+	      DSAsUniqueAccess	      off
 	      ExtMode		      off
-	      ExtModeStaticAlloc      off
-	      ExtModeTesting	      off
-	      ExtModeStaticAllocSize  1000000
 	      ExtModeTransport	      0
+	      ExtModeStaticAlloc      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTesting	      off
 	      ExtModeMexFile	      "ext_comm"
 	      ExtModeMexArgs	      ""
 	      ExtModeIntrfLevel	      "Level1"
+	      InlinedParameterPlacement	"Hierarchical"
+	      TargetOS		      "BareBoardExample"
+	      MultiInstanceErrorCode  "Error"
+	      RootIOFormat	      "Individual arguments"
 	      RTWCAPISignals	      off
 	      RTWCAPIParams	      off
 	      RTWCAPIStates	      off
 	      RTWCAPIRootIO	      off
-	      GenerateASAP2	      off
-	      MultiInstanceErrorCode  "Error"
+	      ERTSrcFileBannerTemplate "ert_code_template.cgt"
+	      ERTHdrFileBannerTemplate "ert_code_template.cgt"
+	      ERTDataSrcFileTemplate  "ert_code_template.cgt"
+	      ERTDataHdrFileTemplate  "ert_code_template.cgt"
+	      ERTCustomFileTemplate   "codertarget_file_process.tlc"
+	      EnableDataOwnership     off
+	      SignalDisplayLevel      10
+	      ParamTuneLevel	      10
+	      GlobalDataDefinition    "Auto"
+	      DataDefinitionFile      "global.c"
+	      GlobalDataReference     "Auto"
+	      ERTFilePackagingFormat  "Modular"
+	      RateTransitionBlockCode "Inline"
+	      DataReferenceFile	      "global.h"
+	      PreserveExpressionOrder off
+	      PreserveIfCondition     off
+	      ConvertIfToSwitch	      on
+	      PreserveExternInFcnDecls on
+	      PreserveStaticInFcnDecls on
+	      SuppressUnreachableDefaultCases on
+	      EnableSignedLeftShifts  on
+	      EnableSignedRightShifts on
+	      IndentStyle	      "K&R"
+	      IndentSize	      "2"
+	      NewlineStyle	      "Default"
+	      EnableUserReplacementTypes off
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  double		  ""
+		  single		  ""
+		  int32			  ""
+		  int16			  ""
+		  int8			  ""
+		  uint32		  ""
+		  uint16		  ""
+		  uint8			  ""
+		  boolean		  ""
+		  int			  ""
+		  uint			  ""
+		  char			  ""
+		  uint64		  ""
+		  int64			  ""
+		}
+		PropName		"ReplacementTypes"
+	      }
+	      MaxIdInt64	      "MAX_int64_T"
+	      MinIdInt64	      "MIN_int64_T"
+	      MaxIdUint64	      "MAX_uint64_T"
+	      MaxIdInt32	      "MAX_int32_T"
+	      MinIdInt32	      "MIN_int32_T"
+	      MaxIdUint32	      "MAX_uint32_T"
+	      MaxIdInt16	      "MAX_int16_T"
+	      MinIdInt16	      "MIN_int16_T"
+	      MaxIdUint16	      "MAX_uint16_T"
+	      MaxIdInt8		      "MAX_int8_T"
+	      MinIdInt8		      "MIN_int8_T"
+	      MaxIdUint8	      "MAX_uint8_T"
+	      BooleanTrueId	      "true"
+	      BooleanFalseId	      "false"
+	      TypeLimitIdReplacementHeaderFile ""
+	      MemSecPackage	      "--- None ---"
+	      MemSecDataConstants     "Default"
+	      MemSecDataIO	      "Default"
+	      MemSecDataInternal      "Default"
+	      MemSecDataParameters    "Default"
+	      MemSecFuncInitTerm      "Default"
+	      MemSecFuncExecute	      "Default"
+	      MemSecFuncSharedUtil    "Default"
+	      GroupConstants	      "Default"
+	      GroupRootInputs	      "Default"
+	      GroupRootOutputs	      "Default"
+	      GroupInternal	      "Default"
+	      GroupParameters	      "Default"
+	      GroupDataTransfer	      "Default"
+	      GroupSharedLocalDataStores "Default"
+	      GroupInstanceSpecificParameters "Default"
+	      GroupModelData	      "Default"
 	    }
 	    PropName		    "Components"
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  20
+	  $ObjectID		  19
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -948,7 +936,7 @@ Model {
 	  CovMcdcMode		  "Masking"
 	}
 	hdlcoderui.hdlcc {
-	  $ObjectID		  21
+	  $ObjectID		  20
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  "HDL Coder custom configuration component"
@@ -962,7 +950,7 @@ Model {
 	  HDLCActiveTab		  "0"
 	}
 	SSC.SimscapeCC {
-	  $ObjectID		  22
+	  $ObjectID		  21
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -987,18 +975,105 @@ Model {
 	  SimscapeOperatingPoint  ""
 	  SelectedTab		  ""
 	}
+	CoderTarget.SettingsController {
+	  $ObjectID		  22
+	  Version		  "1.18.1"
+	  DisabledProps		  []
+	  Description		  "Coder Target"
+	  Name			  "Coder Target"
+	  Array {
+	    Type		    "Struct"
+	    Dimension		    1
+	    MATStruct {
+	      UseCoderTarget	      [1]
+	      TargetHardware	      "Raspberry Pi"
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  Array {
+		    Type		    "Struct"
+		    Dimension		    1
+		    MATStruct {
+		    IPAddress		    "codertarget.raspi.getDeviceAddress"
+		    Port		    "17725"
+		    Verbose		    [1]
+		    RunInBackground	    [0]
+		    }
+		    PropName		    "TCPIP"
+		  }
+		}
+		PropName		"ConnectionInfo"
+	      }
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  Configuration		  "TCP/IP"
+		}
+		PropName		"ExtMode"
+	      }
+	      RTOS		      "Linux"
+	      RTOSBaseRateTaskPriority "40"
+	      DetectTaskOverruns      [0.0]
+	      Scheduler_interrupt_source [0.0]
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  DeviceAddress		  "10.66.56.175"
+		  Username		  "pi"
+		  Password		  "DeepPiCar"
+		  BuildDir		  "/home/pi"
+		}
+		PropName		"BoardParameters"
+	      }
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  BuildAction		  "Build and run"
+		  RunOnBoot		  [0]
+		}
+		PropName		"Runtime"
+	      }
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  SPI0CE0BusSpeed	  "500"
+		  SPI0CE1BusSpeed	  "500"
+		}
+		PropName		"SPI"
+	      }
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  BrokerAddress		  "mqtt.thingspeak.com"
+		  Username		  ""
+		  Password		  ""
+		  ClientID		  ""
+		}
+		PropName		"MQTT"
+	      }
+	      DataVersion	      "2016.02"
+	    }
+	    PropName		    "CoderTargetData"
+	  }
+	}
 	PropName		"Components"
       }
       Name		      "Configuration"
       ExtraOptions	      ""
-      CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition    [ 490, 260, 1370, 890 ]
+      CurrentDlgPage	      "Hardware Implementation"
+      ConfigPrmDlgPosition    [ 387, 81, 1267, 711 ]
     }
     PropName		    "ConfigurationSets"
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    9
+    $ObjectID		    8
   }
   Object {
     $PropName		    "DataTransfer"
@@ -1231,8 +1306,8 @@ Model {
     }
   }
   System {
-    Name		    "dcIntrocomplete_2"
-    Location		    [-8, -8, 1928, 1048]
+    Name		    "simulation"
+    Location		    [-7, -7, 1448, 928]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -1247,15 +1322,25 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "105"
+    ZoomFactor		    "125"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "54"
+    SIDHighWatermark	    "72"
     Block {
       BlockType		      ZeroOrderHold
       Name		      "A-D \nConverter"
       SID		      "52"
       Position		      [260, 225, 290, 255]
       ZOrder		      319
+      BlockMirror	      on
+      Commented		      "on"
+      SampleTime	      "0.001"
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      Name		      "A-D \nConverter1"
+      SID		      "57"
+      Position		      [285, 535, 315, 565]
+      ZOrder		      329
       BlockMirror	      on
       SampleTime	      "0.001"
     }
@@ -1266,19 +1351,26 @@ Model {
       Position		      [145, 135, 175, 165]
       ZOrder		      312
       ForegroundColor	      "magenta"
+      Commented		      "on"
       Value		      "5"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      SID		      "58"
+      Position		      [105, 445, 135, 475]
+      ZOrder		      326
+      ForegroundColor	      "magenta"
+      Value		      ".5"
     }
     Block {
       BlockType		      SubSystem
       Name		      "DC Motor1"
       SID		      "42"
       Ports		      [2, 1]
-<<<<<<< HEAD:simulation.mdl
-      Position		      [610, 105, 665, 165]
-=======
       Position		      [595, 105, 650, 165]
->>>>>>> 760a6b51b74aa6536136d2a163688afbd068e088:PID_Control_DC_Motor/dcIntrocomplete_2.mdl
       ZOrder		      314
+      Commented		      "on"
       RequestExecContextInheritance off
       Object {
 	$PropName		"MaskObject"
@@ -1384,7 +1476,7 @@ Model {
       System {
 	Name			"DC Motor1"
 	Location		[8, 8, 1463, 943]
-	Open			on
+	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
 	ExecutionDomainType	"Deduce"
@@ -1486,104 +1578,13 @@ Model {
       }
     }
     Block {
-      BlockType		      SubSystem
-      Name		      "Desired\n speed1"
-      SID		      "34"
-      Ports		      [0, 1]
-      Position		      [195, -15, 235, 25]
-      ZOrder		      310
-      Commented		      "on"
-      RequestExecContextInheritance off
-      System {
-	Name			"Desired\n speed1"
-	Location		[8, 8, 1465, 985]
-	Open			off
-	PortBlocksUseCompactNotation off
-	SetExecutionDomain	off
-	ExecutionDomainType	"Deduce"
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"usletter"
-	PaperUnits		"inches"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"100"
-	Block {
-	  BlockType		  Step
-	  Name			  "Step"
-	  SID			  "35"
-	  Position		  [25, 100, 55, 130]
-	  ZOrder		  -1
-	  Time			  "7"
-	  After			  "-4"
-	  SampleTime		  "0.02"
-	}
-	Block {
-	  BlockType		  Step
-	  Name			  "Step1"
-	  SID			  "36"
-	  Position		  [25, 25, 55, 55]
-	  ZOrder		  -2
-	  After			  "2"
-	  SampleTime		  "0.02"
-	}
-	Block {
-	  BlockType		  Sum
-	  Name			  "Sum"
-	  SID			  "37"
-	  Ports			  [2, 1]
-	  Position		  [135, 30, 155, 50]
-	  ZOrder		  -3
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "|++"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Speed"
-	  SID			  "38"
-	  Position		  [315, 33, 345, 47]
-	  ZOrder		  -4
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  ZOrder		  1
-	  SrcBlock		  "Step"
-	  SrcPort		  1
-	  Points		  [85, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  2
-	}
-	Line {
-	  ZOrder		  2
-	  SrcBlock		  "Step1"
-	  SrcPort		  1
-	  DstBlock		  "Sum"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  3
-	  SrcBlock		  "Sum"
-	  SrcPort		  1
-	  DstBlock		  "Speed"
-	  DstPort		  1
-	}
-      }
-    }
-    Block {
       BlockType		      Reference
       Name		      "Discrete PID Controller"
       SID		      "18"
       Ports		      [1, 1]
-      Position		      [290, 133, 350, 167]
+      Position		      [285, 133, 345, 167]
       ZOrder		      -5
+      Commented		      "on"
       LibraryVersion	      "1.444"
       FontName		      "Arial"
       FontSize		      12
@@ -1600,11 +1601,11 @@ Model {
       IntegratorMethod	      "Forward Euler"
       FilterMethod	      "Forward Euler"
       ControllerParametersSource "internal"
-      P			      "10"
-      I			      "2"
-      D			      "2"
+      P			      "2"
+      I			      "2.181"
+      D			      ".2"
       UseFilter		      on
-      N			      "162.4"
+      N			      "160.6"
       TunerSelectOption	      "Transfer Function Based (PID Tuner App)"
       ZeroCross		      on
       InitialConditionSource  "internal"
@@ -1755,33 +1756,245 @@ Model {
       }
     }
     Block {
+      BlockType		      Reference
+      Name		      "Discrete PID Controller1"
+      SID		      "65"
+      Ports		      [1, 1]
+      Position		      [310, 443, 370, 477]
+      ZOrder		      324
+      Commented		      "through"
+      LibraryVersion	      "1.444"
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+      SourceBlock	      "simulink/Continuous/PID Controller"
+      SourceType	      "PID 1dof"
+      SourceProductName	      "Simulink"
+      SourceProductBaseCode   "SL"
+      ContentPreviewEnabled   on
+      Controller	      "PID"
+      Form		      "Parallel"
+      TimeDomain	      "Discrete-time"
+      SampleTime	      "0.001"
+      IntegratorMethod	      "Forward Euler"
+      FilterMethod	      "Forward Euler"
+      ControllerParametersSource "internal"
+      P			      "2"
+      I			      "2.181"
+      D			      ".2"
+      UseFilter		      on
+      N			      "160.6"
+      TunerSelectOption	      "Transfer Function Based (PID Tuner App)"
+      ZeroCross		      on
+      InitialConditionSource  "internal"
+      InitialConditionForIntegrator "0"
+      InitialConditionForFilter	"0"
+      DifferentiatorICPrevScaledInput "0"
+      ExternalReset	      "none"
+      IgnoreLimit	      off
+      TrackingMode	      off
+      Kt		      "1"
+      LimitOutput	      off
+      UpperSaturationLimit    "10"
+      LowerSaturationLimit    "-10"
+      LinearizeAsGain	      on
+      AntiWindupMode	      "back-calculation"
+      Kb		      "1"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      LockScale		      off
+      PGainOutDataTypeStr     "Inherit: Inherit via internal rule"
+      PProdOutDataTypeStr     "Inherit: Inherit via internal rule"
+      POutMin		      "[]"
+      POutMax		      "[]"
+      IGainOutDataTypeStr     "Inherit: Inherit via internal rule"
+      IProdOutDataTypeStr     "Inherit: Inherit via internal rule"
+      IOutMin		      "[]"
+      IOutMax		      "[]"
+      DGainOutDataTypeStr     "Inherit: Inherit via internal rule"
+      DProdOutDataTypeStr     "Inherit: Inherit via internal rule"
+      DOutMin		      "[]"
+      DOutMax		      "[]"
+      NGainOutDataTypeStr     "Inherit: Inherit via internal rule"
+      NProdOutDataTypeStr     "Inherit: Inherit via internal rule"
+      NOutMin		      "[]"
+      NOutMax		      "[]"
+      SumOutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SumOutMin		      "[]"
+      SumOutMax		      "[]"
+      SaturationOutDataTypeStr "Inherit: Same as input"
+      SaturationOutMin	      "[]"
+      SaturationOutMax	      "[]"
+      PParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      PParamMin		      "[]"
+      PParamMax		      "[]"
+      IParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      IParamMin		      "[]"
+      IParamMax		      "[]"
+      DParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      DParamMin		      "[]"
+      DParamMax		      "[]"
+      NParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      NParamMin		      "[]"
+      NParamMax		      "[]"
+      KbParamDataTypeStr      "Inherit: Inherit via internal rule"
+      KbParamMin	      "[]"
+      KbParamMax	      "[]"
+      KtParamDataTypeStr      "Inherit: Inherit via internal rule"
+      KtParamMin	      "[]"
+      KtParamMax	      "[]"
+      KbOutDataTypeStr	      "Inherit: Inherit via internal rule"
+      KbOutMin		      "[]"
+      KbOutMax		      "[]"
+      KtOutDataTypeStr	      "Inherit: Inherit via internal rule"
+      KtOutMin		      "[]"
+      KtOutMax		      "[]"
+      IntegratorOutDataTypeStr "Inherit: Inherit via internal rule"
+      IntegratorOutMin	      "[]"
+      IntegratorOutMax	      "[]"
+      FilterOutDataTypeStr    "Inherit: Inherit via internal rule"
+      FilterOutMin	      "[]"
+      FilterOutMax	      "[]"
+      SumI1OutDataTypeStr     "Inherit: Inherit via internal rule"
+      SumI1OutMin	      "[]"
+      SumI1OutMax	      "[]"
+      SumI2OutDataTypeStr     "Inherit: Inherit via internal rule"
+      SumI2OutMin	      "[]"
+      SumI2OutMax	      "[]"
+      SumI3OutDataTypeStr     "Inherit: Inherit via internal rule"
+      SumI3OutMin	      "[]"
+      SumI3OutMax	      "[]"
+      SumI4OutDataTypeStr     "Inherit: Inherit via internal rule"
+      SumI4OutMin	      "[]"
+      SumI4OutMax	      "[]"
+      SumDOutDataTypeStr      "Inherit: Inherit via internal rule"
+      SumDOutMin	      "[]"
+      SumDOutMax	      "[]"
+      SumAccumDataTypeStr     "Inherit: Inherit via internal rule"
+      SumI1AccumDataTypeStr   "Inherit: Inherit via internal rule"
+      SumI2AccumDataTypeStr   "Inherit: Inherit via internal rule"
+      SumI3AccumDataTypeStr   "Inherit: Inherit via internal rule"
+      SumI4AccumDataTypeStr   "Inherit: Inherit via internal rule"
+      SumDAccumDataTypeStr    "Inherit: Inherit via internal rule"
+      DifferentiatorOutDataTypeStr "Inherit: Inherit via internal rule"
+      DifferentiatorOutMin    "[]"
+      DifferentiatorOutMax    "[]"
+      FilterDiffNumProductOutputDataTypeStr "Inherit: Inherit via internal rule"
+      FilterDiffDenProductOutputDataTypeStr "Inherit: Inherit via internal rule"
+      FilterDiffNumAccumDataTypeStr "Inherit: Inherit via internal rule"
+      FilterDiffDenAccumDataTypeStr "Inherit: Inherit via internal rule"
+      FilterDiffOutCoefDataTypeStr "Inherit: Inherit via internal rule"
+      FilterDiffOutCoefMin    "[]"
+      FilterDiffOutCoefMax    "[]"
+      ReciprocalOutDataTypeStr "Inherit: Inherit via internal rule"
+      ReciprocalOutMin	      "[]"
+      ReciprocalOutMax	      "[]"
+      SumDenOutDataTypeStr    "Inherit: Inherit via internal rule"
+      SumDenOutMin	      "[]"
+      SumDenOutMax	      "[]"
+      SumNumOutDataTypeStr    "Inherit: Inherit via internal rule"
+      SumNumOutMin	      "[]"
+      SumNumOutMax	      "[]"
+      SumDenAccumDataTypeStr  "Inherit: Inherit via internal rule"
+      SumNumAccumDataTypeStr  "Inherit: Inherit via internal rule"
+      DivideOutDataTypeStr    "Inherit: Inherit via internal rule"
+      DivideOutMin	      "[]"
+      DivideOutMax	      "[]"
+      IntegratorContinuousStateAttributes "''"
+      IntegratorStateMustResolveToSignalObject off
+      IntegratorRTWStateStorageClass "Auto"
+      FilterContinuousStateAttributes "''"
+      FilterStateMustResolveToSignalObject off
+      FilterRTWStateStorageClass "Auto"
+      ParallelPVariant	      "InternalParameters"
+      IdealPVariant	      "Disabled"
+      IVariant		      "InternalParameters"
+      DVariant		      "InternalParameters"
+      IntegratorVariant	      "Discrete"
+      SatVariant	      "Disabled"
+      AWVariant		      "Passthrough"
+      PCopyVariant	      "Disabled"
+      TRVariant		      "Disabled"
+      FdbkBlocksVariant	      "Forward"
+      IdealPFdbkVariant	      "Disabled"
+      SatFdbkVariant	      "Disabled"
+      DerivativeFilterVariant "ForwardEulerFilter"
+      NVariant		      "InternalParameters"
+      NCopyVariant	      "Disabled"
+      FilterICVariant	      "InternalICsFilter"
+      IntegratorICVariant     "InternalICs"
+      ExternalResetVariant    "Disabled"
+      TRSumVariant	      "Passthrough"
+      SumFdbkVariant	      "Disabled"
+      SumVariant	      "Sum_PID"
+      InitialConditionSetting "Auto"
+      Port {
+	PortNumber		1
+	Name			"dc"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "GPIO Read"
+      SID		      "71"
+      Ports		      [0, 1]
+      Position		      [565, 430, 685, 490]
+      ZOrder		      332
+      LibraryVersion	      "1.363"
+      SourceBlock	      "embdlinuxlib/GPIO Read"
+      SourceType	      "GPIO Read"
+      SourceProductName	      "Simulink Support Package for Raspberry Pi Hardware"
+      SourceProductBaseCode   "RASPPI"
+      ContentPreviewEnabled   on
+      board		      "Pi 3 Model B"
+      gpio		      "21"
+      internalResistor	      "Off"
+      sampleTime	      "0.1"
+      direction		      "Input"
+      blockPlatform	      "Raspberry Pi"
+      Port {
+	PortNumber		1
+	Name			"Measured speed"
+      }
+    }
+    Block {
       BlockType		      Gain
       Name		      "Gain"
-      SID		      "54"
-<<<<<<< HEAD:simulation.mdl
-      Position		      [510, 135, 540, 165]
-      ZOrder		      321
-      Gain		      "75"
-=======
+      SID		      "55"
       Position		      [505, 135, 535, 165]
       ZOrder		      321
-      Gain		      "70"
->>>>>>> 760a6b51b74aa6536136d2a163688afbd068e088:PID_Control_DC_Motor/dcIntrocomplete_2.mdl
+      Commented		      "on"
+      Gain		      "40"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      Reference
+      Name		      "PWM"
+      SID		      "56"
+      Ports		      [1]
+      Position		      [425, 430, 545, 490]
+      ZOrder		      322
+      ForegroundColor	      "red"
+      LibraryVersion	      "1.339"
+      SourceBlock	      "raspberrypilib/PWM"
+      SourceType	      "raspi.internal.PWMBlock"
+      SourceProductName	      "Simulink Support Package for Raspberry Pi Hardware"
+      SourceProductBaseCode   "RASPPI"
+      board		      "Pi 3 Model B"
+      Pin_		      "18"
+      Frequency		      "1000"
+      blockPlatform	      "Raspberry Pi"
+    }
+    Block {
+      BlockType		      Reference
       Name		      "PWM Generator\n(DC-DC)"
       SID		      "53"
       Ports		      [1, 1]
-<<<<<<< HEAD:simulation.mdl
-      Position		      [420, 131, 470, 169]
-=======
       Position		      [400, 131, 450, 169]
->>>>>>> 760a6b51b74aa6536136d2a163688afbd068e088:PID_Control_DC_Motor/dcIntrocomplete_2.mdl
       ZOrder		      320
+      Commented		      "on"
       LibraryVersion	      "1.167"
       SourceBlock	      "powerlib_meascontrol/Pulse & Signal\nGenerators/PWM Generator\n(DC-DC)"
       SourceType	      "PWM Generator (DC-DC)"
@@ -1798,40 +2011,51 @@ Model {
       Ports		      [1]
       Position		      [745, 269, 775, 301]
       ZOrder		      309
+      Commented		      "on"
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData2'),extmgr.Configuration('Visuals','Time Domain"
-<<<<<<< HEAD:simulation.mdl
-      "',true,'SerializedDisplays',{struct('MinYLimReal','-21.16337','MaxYLimReal','2.35149','YLabelReal','','MinYLimMa"
-      "g','0.00000','MaxYLimMag','21.16337','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Ax"
-      "esColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.066"
-      "6666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.83"
-      "1372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.07450980392156"
-      "86 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLin"
-      "es',1,'LineNames',{{'Measured speed'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinY"
-      "LimReal','-21.16337','MaxYLimReal','2.35149','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','21.16337','Leg"
+      "ources','WiredSimulink',true),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('Mi"
+      "nYLimReal','-4.02743','MaxYLimReal','11.2556','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','11.2556','Leg"
       "endVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.68627"
-      "4509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.4117647"
-      "05882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.83137"
-      "2549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configurat"
-      "ion('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true,'Version','2018b')),'Versio"
-      "n','2018b','Position',[1.66666666666667 41.6666666666667 718.666666666667 839.333333333333])"
-=======
-      "',true,'SerializedDisplays',{struct('MinYLimReal','-2.29309','MaxYLimReal','6.35361','YLabelReal','','MinYLimMag"
-      "','0.00000','MaxYLimMag','6.35361','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axes"
+      "4509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529"
+      "411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647"
+      "058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLa"
+      "bel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Measured speed'}},'S"
+      "howContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-4.02743','MaxYLimReal','11.255"
+      "6','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','11.2556','LegendVisibility','off','XGrid',true,'YGrid',t"
+      "rue,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803"
+      "922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.06666666666"
+      "66667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.05882352941"
+      "17647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration('Tools','Plot Navigation',true),extmgr."
+      "Configuration('Tools','Measurements',true,'Version','2018b')),'Version','2018b','Position',[721.666666666667 41."
+      "6666666666667 718.666666666667 839.333333333333])"
+      NumInputPorts	      "1"
+      Floating		      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope4"
+      SID		      "68"
+      Ports		      [1]
+      Position		      [795, 444, 825, 476]
+      ZOrder		      325
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1'),extmgr.Configuration('Visuals','Time Domain"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','-1.00000','MaxYLimReal','1.00000','YLabelReal','','MinYLimMag"
+      "','0.00000','MaxYLimMag','1.00000','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axes"
       "Color',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.06666"
       "66666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.8313"
       "72549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686"
       " 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines"
       "',1,'LineNames',{{'Measured speed'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLi"
-      "mReal','-2.29309','MaxYLimReal','6.35361','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','6.35361','LegendV"
+      "mReal','-1.00000','MaxYLimReal','1.00000','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','1.00000','LegendV"
       "isibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509"
       "803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.41176470588"
       "2353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549"
       "019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration("
       "'Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true,'Version','2018b')),'Version','"
-      "2018b','Position',[1921 50 1920 963])"
->>>>>>> 760a6b51b74aa6536136d2a163688afbd068e088:PID_Control_DC_Motor/dcIntrocomplete_2.mdl
+      "2018b','Position',[721.666666666667 41.6666666666667 718.666666666667 839.333333333333])"
       NumInputPorts	      "1"
       Floating		      off
     }
@@ -1841,6 +2065,7 @@ Model {
       SID		      "49"
       Position		      [410, 75, 440, 105]
       ZOrder		      316
+      Commented		      "on"
       Time		      "0"
       After		      ".2"
       SampleTime	      "0"
@@ -1852,6 +2077,21 @@ Model {
       Ports		      [2, 1]
       Position		      [225, 140, 245, 160]
       ZOrder		      -7
+      ShowName		      off
+      Commented		      "on"
+      IconShape		      "round"
+      Inputs		      "|+-"
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      SID		      "70"
+      Ports		      [2, 1]
+      Position		      [215, 450, 235, 470]
+      ZOrder		      323
       ShowName		      off
       IconShape		      "round"
       Inputs		      "|+-"
@@ -1983,11 +2223,7 @@ Model {
       ZOrder		      22
       SrcBlock		      "DC Motor1"
       SrcPort		      1
-<<<<<<< HEAD:simulation.mdl
-      Points		      [45, 0; 0, 105]
-=======
       Points		      [60, 0; 0, 105]
->>>>>>> 760a6b51b74aa6536136d2a163688afbd068e088:PID_Control_DC_Motor/dcIntrocomplete_2.mdl
       Branch {
 	ZOrder			38
 	Labels			[1, 0]
@@ -2030,6 +2266,56 @@ Model {
       SrcPort		      1
       DstBlock		      "DC Motor1"
       DstPort		      2
+    }
+    Line {
+      Name		      "Measured speed"
+      ZOrder		      55
+      SrcBlock		      "GPIO Read"
+      SrcPort		      1
+      Points		      [50, 0]
+      Branch {
+	ZOrder			58
+	DstBlock		"Scope4"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			56
+	Labels			[2, 0]
+	Points			[0, 90]
+	DstBlock		"A-D \nConverter1"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "dc"
+      ZOrder		      54
+      Labels		      [0, 0]
+      SrcBlock		      "Discrete PID Controller1"
+      SrcPort		      1
+      DstBlock		      "PWM"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      50
+      SrcBlock		      "A-D \nConverter1"
+      SrcPort		      1
+      Points		      [-55, 0]
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      51
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "Discrete PID Controller1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      52
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      1
     }
   }
 }
