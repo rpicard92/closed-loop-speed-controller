@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.29"
+    ComputedModelVersion    "1.48"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -27,7 +27,7 @@ Model {
     ExternalFileReference {
       Reference		      "raspberrypilib/PWM"
       Path		      "simulation/PWM"
-      SID		      "56"
+      SID		      "74"
       Type		      "LIBRARY_BLOCK"
     }
     OrderedModelArguments   1
@@ -122,9 +122,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "computer"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Apr 15 12:36:05 2019"
-  RTWModifiedTimeStamp	  477232556
-  ModelVersionFormat	  "1.%<AutoIncrement:29>"
+  LastModifiedDate	  "Wed Apr 17 12:58:19 2019"
+  RTWModifiedTimeStamp	  477406698
+  ModelVersionFormat	  "1.%<AutoIncrement:48>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -236,7 +236,7 @@ Model {
 	  DisabledProps		  []
 	  Description		  ""
 	  StartTime		  "0.0"
-	  StopTime		  "10"
+	  StopTime		  "1000"
 	  AbsTol		  "auto"
 	  AutoScaleAbsTol	  on
 	  FixedStep		  "auto"
@@ -985,7 +985,7 @@ Model {
 	    Type		    "Struct"
 	    Dimension		    1
 	    MATStruct {
-	      UseCoderTarget	      [1]
+	      UseCoderTarget	      [1.0]
 	      TargetHardware	      "Raspberry Pi"
 	      Array {
 		Type			"Struct"
@@ -997,8 +997,8 @@ Model {
 		    MATStruct {
 		    IPAddress		    "codertarget.raspi.getDeviceAddress"
 		    Port		    "17725"
-		    Verbose		    [1]
-		    RunInBackground	    [0]
+		    Verbose		    [0]
+		    RunInBackground	    [0.0]
 		    }
 		    PropName		    "TCPIP"
 		  }
@@ -1021,10 +1021,10 @@ Model {
 		Type			"Struct"
 		Dimension		1
 		MATStruct {
-		  DeviceAddress		  "10.66.56.175"
+		  DeviceAddress		  "10.66.223.107"
 		  Username		  "pi"
 		  Password		  "DeepPiCar"
-		  BuildDir		  "/home/pi"
+		  BuildDir		  "/home/pi/cps"
 		}
 		PropName		"BoardParameters"
 	      }
@@ -1033,7 +1033,7 @@ Model {
 		Dimension		1
 		MATStruct {
 		  BuildAction		  "Build and run"
-		  RunOnBoot		  [0]
+		  RunOnBoot		  [0.0]
 		}
 		PropName		"Runtime"
 	      }
@@ -1324,7 +1324,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "125"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "72"
+    SIDHighWatermark	    "74"
     Block {
       BlockType		      ZeroOrderHold
       Name		      "A-D \nConverter"
@@ -1333,15 +1333,6 @@ Model {
       ZOrder		      319
       BlockMirror	      on
       Commented		      "on"
-      SampleTime	      "0.001"
-    }
-    Block {
-      BlockType		      ZeroOrderHold
-      Name		      "A-D \nConverter1"
-      SID		      "57"
-      Position		      [285, 535, 315, 565]
-      ZOrder		      329
-      BlockMirror	      on
       SampleTime	      "0.001"
     }
     Block {
@@ -1358,10 +1349,10 @@ Model {
       BlockType		      Constant
       Name		      "Constant1"
       SID		      "58"
-      Position		      [105, 445, 135, 475]
+      Position		      [65, 440, 135, 480]
       ZOrder		      326
       ForegroundColor	      "magenta"
-      Value		      ".5"
+      Value		      ".158"
     }
     Block {
       BlockType		      SubSystem
@@ -1582,7 +1573,7 @@ Model {
       Name		      "Discrete PID Controller"
       SID		      "18"
       Ports		      [1, 1]
-      Position		      [285, 133, 345, 167]
+      Position		      [280, 133, 340, 167]
       ZOrder		      -5
       Commented		      "on"
       LibraryVersion	      "1.444"
@@ -1972,10 +1963,10 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "PWM"
-      SID		      "56"
+      SID		      "74"
       Ports		      [1]
-      Position		      [425, 430, 545, 490]
-      ZOrder		      322
+      Position		      [415, 430, 535, 490]
+      ZOrder		      334
       ForegroundColor	      "red"
       LibraryVersion	      "1.339"
       SourceBlock	      "raspberrypilib/PWM"
@@ -1984,7 +1975,7 @@ Model {
       SourceProductBaseCode   "RASPPI"
       board		      "Pi 3 Model B"
       Pin_		      "18"
-      Frequency		      "1000"
+      Frequency		      "100"
       blockPlatform	      "Raspberry Pi"
     }
     Block {
@@ -2079,20 +2070,6 @@ Model {
       ZOrder		      -7
       ShowName		      off
       Commented		      "on"
-      IconShape		      "round"
-      Inputs		      "|+-"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum1"
-      SID		      "70"
-      Ports		      [2, 1]
-      Position		      [215, 450, 235, 470]
-      ZOrder		      323
-      ShowName		      off
       IconShape		      "round"
       Inputs		      "|+-"
       InputSameDT	      off
@@ -2270,25 +2247,15 @@ Model {
     Line {
       Name		      "Measured speed"
       ZOrder		      55
+      Labels		      [0, 0]
       SrcBlock		      "GPIO Read"
       SrcPort		      1
-      Points		      [50, 0]
-      Branch {
-	ZOrder			58
-	DstBlock		"Scope4"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			56
-	Labels			[2, 0]
-	Points			[0, 90]
-	DstBlock		"A-D \nConverter1"
-	DstPort			1
-      }
+      DstBlock		      "Scope4"
+      DstPort		      1
     }
     Line {
       Name		      "dc"
-      ZOrder		      54
+      ZOrder		      66
       Labels		      [0, 0]
       SrcBlock		      "Discrete PID Controller1"
       SrcPort		      1
@@ -2296,25 +2263,10 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      50
-      SrcBlock		      "A-D \nConverter1"
-      SrcPort		      1
-      Points		      [-55, 0]
-      DstBlock		      "Sum1"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      51
-      SrcBlock		      "Sum1"
-      SrcPort		      1
-      DstBlock		      "Discrete PID Controller1"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      52
+      ZOrder		      64
       SrcBlock		      "Constant1"
       SrcPort		      1
-      DstBlock		      "Sum1"
+      DstBlock		      "Discrete PID Controller1"
       DstPort		      1
     }
   }
