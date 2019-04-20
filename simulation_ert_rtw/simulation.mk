@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'simulation'. 
 ## 
 ## Makefile     : simulation.mk
-## Generated on : Wed Apr 17 12:55:15 2019
+## Generated on : Sat Apr 20 16:01:42 2019
 ##  version:  
 ## 
 ## Build Info:
@@ -182,7 +182,7 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR) -I$(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/raspi/server -I$(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/linux/include -I$(START_DIR)/simulation_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/raspi/include -I$(MATLAB_ROOT)/toolbox/target/codertarget/rtos/inc
+INCLUDES_BUILDINFO = -I$(START_DIR) -I$(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/raspi/server -I$(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/linux/include -I$(START_DIR)/simulation_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/raspi/include -I$(MATLAB_ROOT)/toolbox/target/codertarget/rtos/inc
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -190,20 +190,19 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 ## DEFINES
 ###########################################################################
 
-DEFINES_ = -DMODEL=simulation -DNUMST=1 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DON_TARGET_WAIT_FOR_START=1 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTID01EQ=0 -DEXT_MODE=1 -DONESTEPFCN=1 -DTERMFCN=1 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0 -DARM_PROJECT -D_USE_TARGET_UDP_ -D_RUNONTARGETHARDWARE_BUILD_ -DSTACK_SIZE=64 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DRT
-DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DEXT_MODE=1 -DONESTEPFCN=1 -DTERMFCN=1 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0
-DEFINES_IMPLIED = -DTID01EQ=0
-DEFINES_OPTS = -DON_TARGET_WAIT_FOR_START=1
+DEFINES_ = -DMODEL=simulation -DNUMST=3 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTID01EQ=1 -DONESTEPFCN=1 -DTERMFCN=1 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=1 -DARM_PROJECT -D_USE_TARGET_UDP_ -D_RUNONTARGETHARDWARE_BUILD_ -DSTACK_SIZE=64 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DRT -DMW_RASPI_DETECTOVERRUN
+DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DONESTEPFCN=1 -DTERMFCN=1 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=1
+DEFINES_OPTS = -DTID01EQ=1
 DEFINES_SKIPFORSIL = -DARM_PROJECT -D_USE_TARGET_UDP_ -D_RUNONTARGETHARDWARE_BUILD_ -DSTACK_SIZE=64 -DRT
-DEFINES_STANDARD = -DMODEL=simulation -DNUMST=1 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
+DEFINES_STANDARD = -DMODEL=simulation -DNUMST=3 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
 
-DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_IMPLIED) $(DEFINES_OPTS) $(DEFINES_SKIPFORSIL) $(DEFINES_STANDARD)
+DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_OPTS) $(DEFINES_SKIPFORSIL) $(DEFINES_STANDARD)
 
 ###########################################################################
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/raspi/server/MW_pigs.c $(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/raspi/server/system.c $(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/linux/src/MW_gpio.c $(START_DIR)/simulation_ert_rtw/rtGetInf.c $(START_DIR)/simulation_ert_rtw/rtGetNaN.c $(START_DIR)/simulation_ert_rtw/rt_nonfinite.c $(START_DIR)/simulation_ert_rtw/simulation.c $(START_DIR)/simulation_ert_rtw/simulation_data.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/raspi/server/MW_raspi_init.c $(MATLAB_ROOT)/toolbox/target/codertarget/rtos/src/linuxinitialize.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/rtiostream_interface.c $(MATLAB_ROOT)/rtw/c/src/rtiostream/rtiostreamtcpip/rtiostream_tcpip.c
+SRCS = $(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/raspi/server/MW_pigs.c $(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/raspi/server/system.c $(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/linux/src/MW_gpio.c $(START_DIR)/simulation_ert_rtw/rtw_linux.c $(START_DIR)/simulation_ert_rtw/rtGetInf.c $(START_DIR)/simulation_ert_rtw/rtGetNaN.c $(START_DIR)/simulation_ert_rtw/rt_nonfinite.c $(START_DIR)/simulation_ert_rtw/simulation.c $(START_DIR)/simulation_ert_rtw/simulation_data.c $(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/raspi/server/MW_raspi_init.c $(MATLAB_ROOT)/toolbox/target/codertarget/rtos/src/linuxinitialize.c
 
 MAIN_SRC = $(START_DIR)/simulation_ert_rtw/ert_main.c
 
@@ -213,7 +212,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = MW_pigs.c.o system.c.o MW_gpio.c.o rtGetInf.c.o rtGetNaN.c.o rt_nonfinite.c.o simulation.c.o simulation_data.c.o ext_svr.c.o updown.c.o ext_work.c.o rtiostream_utils.c.o MW_raspi_init.c.o linuxinitialize.c.o rtiostream_interface.c.o rtiostream_tcpip.c.o
+OBJS = MW_pigs.c.o system.c.o MW_gpio.c.o rtw_linux.c.o rtGetInf.c.o rtGetNaN.c.o rt_nonfinite.c.o simulation.c.o simulation_data.c.o MW_raspi_init.c.o linuxinitialize.c.o
 
 MAIN_OBJ = ert_main.c.o
 
@@ -263,33 +262,37 @@ CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
 # C++ Linker
 #---------------
 
+CPP_LDFLAGS_ = -lpthread -lpthread -lpthread -lpthread
 CPP_LDFLAGS_SKIPFORSIL =  
 
-CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
+CPP_LDFLAGS += $(CPP_LDFLAGS_) $(CPP_LDFLAGS_SKIPFORSIL)
 
 #------------------------------
 # C++ Shared Library Linker
 #------------------------------
 
+CPP_SHAREDLIB_LDFLAGS_ = -lpthread -lpthread -lpthread -lpthread
 CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL =  
 
-CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
+CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_) $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
 #-----------
 # Linker
 #-----------
 
+LDFLAGS_ = -lpthread -lpthread -lpthread -lpthread
 LDFLAGS_SKIPFORSIL =  
 
-LDFLAGS += $(LDFLAGS_SKIPFORSIL)
+LDFLAGS += $(LDFLAGS_) $(LDFLAGS_SKIPFORSIL)
 
 #--------------------------
 # Shared Library Linker
 #--------------------------
 
+SHAREDLIB_LDFLAGS_ = -lpthread -lpthread -lpthread -lpthread
 SHAREDLIB_LDFLAGS_SKIPFORSIL =  
 
-SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
+SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_) $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
 ###########################################################################
 ## INLINED COMMANDS
@@ -432,30 +435,6 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
-%.c.o : $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/%.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-
-%.s.o : $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/%.s
-	$(AS) $(ASFLAGS) -o $@ $<
-
-
-%.cpp.o : $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/%.cpp
-	$(CPP) $(CPPFLAGS) -o $@ $<
-
-
-%.c.o : $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/%.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-
-%.s.o : $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/%.s
-	$(AS) $(ASFLAGS) -o $@ $<
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/%.cpp
-	$(CPP) $(CPPFLAGS) -o $@ $<
-
-
 MW_pigs.c.o : $(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/realtime/targets/raspi/server/MW_pigs.c
 	$(CC) $(CFLAGS) -o $@ $<
 
@@ -473,10 +452,6 @@ MW_raspi_init.c.o : $(MATLAB_WORKSPACE)/C/ProgramData/MATLAB/SupportPackages/R20
 
 
 linuxinitialize.c.o : $(MATLAB_ROOT)/toolbox/target/codertarget/rtos/src/linuxinitialize.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-
-rtiostream_tcpip.c.o : $(MATLAB_ROOT)/rtw/c/src/rtiostream/rtiostreamtcpip/rtiostream_tcpip.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 
